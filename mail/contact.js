@@ -12,11 +12,11 @@ $(function () {
             var message = $("textarea#message").val();
 
             $this = $("#sendMessageButton");
-            // $this.prop("disabled", false);
+            $this.prop("disabled", true);
 
             $.ajax({
-                url: "email.php",
-                method: "POST",
+                url: "contact.php",
+                type: "POST",
                 data: {
                     name: name,
                     email: email,
@@ -42,11 +42,11 @@ $(function () {
                     $('#success > .alert-danger').append('</div>');
                     $('#contactForm').trigger("reset");
                 },
-                // complete: function () {
-                //     setTimeout(function () {
-                //         $this.prop("disabled", false);
-                //     }, 1000);
-                // }
+                complete: function () {
+                    setTimeout(function () {
+                        $this.prop("disabled", false);
+                    }, 1000);
+                }
             });
         },
         filter: function () {
