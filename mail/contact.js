@@ -12,7 +12,7 @@ $(function () {
             var message = $("textarea#message").val();
 
             $this = $("#sendMessageButton");
-            $this.prop("disabled", false);
+            $this.prop("disabled", true);
 
             $.ajax({
                 url: "contact.php",
