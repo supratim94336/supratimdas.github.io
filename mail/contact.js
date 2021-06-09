@@ -42,11 +42,11 @@ $(function () {
                     $('#success > .alert-danger').append('</div>');
                     $('#contactForm').trigger("reset");
                 },
-                complete: function () {
-                    setTimeout(function () {
-                        $this.prop("disabled", false);
-                    }, 1000);
-                }
+                // complete: function () {
+                //     setTimeout(function () {
+                //         $this.prop("disabled", false);
+                //     }, 1000);
+                // }
             });
         },
         filter: function () {
